@@ -1,0 +1,346 @@
+{
+  "cats": [
+    {
+      "id": 1,
+      "name": "Kyaw Kyaw ",
+      "breed": "Snowshoe",
+      "age": "1y",
+      "image": "/photo/cats/Kyaw Kyaw 1y Snowshoe.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 2,
+      "name": "Kyaw Gyi",
+      "breed": "TabbyCat",
+      "age": "6 months",
+      "image": "/photo/cats/Bug 6months TabbyCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 3,
+      "name": "Chocolate",
+      "breed": "BurmeseCat",
+      "age": "2y",
+      "image": "/photo/cats/Chocolate 2y BurmeseCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 4,
+      "name": "Coconut",
+      "breed": "BurmeseCat",
+      "age": "1y",
+      "image": "/photo/cats/Coconut 1y BurmeseCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 5,
+      "name": "Da Fang",
+      "breed": "Siamese",
+      "age": "2y",
+      "image": "/photo/cats/Da Fang 2y Siamese.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 6,
+      "name": "Gary",
+      "breed": "Snowshoe",
+      "age": "1y",
+      "image": "/photo/cats/Gary 1y Snowshow.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 7,
+      "name": "Goblin",
+      "breed": "TabbyCat",
+      "age": "3months",
+      "image": "/photo/cats/Goblin 3months TabbyCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 8,
+      "name": "Hunter",
+      "breed": "tabbycat",
+      "age": "",
+      "image": "/photo/cats/Hunter 3y tabbycat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 9,
+      "name": "Ju Ju",
+      "breed": "Snowshoe",
+      "age": "1y",
+      "image": "/photo/cats/Ju Ju 1y Snowshoe.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 10,
+      "name": "LaneMorTea",
+      "breed": "TabbyCat",
+      "age": "2y",
+      "image": "/photo/cats/LaneMorTea 2y TabbyCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 11,
+      "name": "Larry",
+      "breed": "khao manee",
+      "age": "1y",
+      "image": "/photo/cats/Larry 1y khao manee.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 12,
+      "name": "Mare Gyi",
+      "breed": "BombayCat",
+      "age": "2y",
+      "image": "/photo/cats/Mare Gyi 2y BombayCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 13,
+      "name": "Mare Lay",
+      "breed": "BombayCat",
+      "age": "8m",
+      "image": "/photo/cats/Mare Lay 8m BombayCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 14,
+      "name": "Mare Lone",
+      "breed": "BombayCat",
+      "age": "2y",
+      "image": "/photo/cats/Mare Lone 2y BombayCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 15,
+      "name": "Mare Ma",
+      "breed": "BombayCat",
+      "age": "6m",
+      "image": "/photo/cats/Mare Ma 6m BombayCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 16,
+      "name": "Mare Mare",
+      "breed": "BombayCat",
+      "age": "1y",
+      "image": "/photo/cats/Mare Mare 1y BombayCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 17,
+      "name": "Mare Too",
+      "breed": "BombayCat",
+      "age": "1y",
+      "image": "/photo/cats/Mare Too 1y BombayCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 18,
+      "name": "Mi Mi",
+      "breed": "Snowshoe",
+      "age": "2y",
+      "image": "/photo/cats/Mi Mi 2y Snowshoe.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 19,
+      "name": "Miya",
+      "breed": "siamese",
+      "age": "1y",
+      "image": "/photo/cats/Miya 1y siamese.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 20,
+      "name": "Moe Lay",
+      "breed": "BurmeseCat",
+      "age": "6m",
+      "image": "/photo/cats/Moe Lay 6m BurmeseCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 21,
+      "name": "Monarch",
+      "breed": "TabbyCat",
+      "age": "3y",
+      "image": "/photo/cats/Monarch 3y TabbyCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 22,
+      "name": "Myat Mare",
+      "breed": "Siamese",
+      "age": "2y",
+      "image": "/photo/cats/Myat Mare 2y Siamese.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 23,
+      "name": "Myat Pyar",
+      "breed": "khao manee",
+      "age": "1y",
+      "image": "/photo/cats/Myat Pyar 1y khao manee.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 24,
+      "name": "Myo Myo",
+      "breed": "burmeseCat",
+      "age": "1y",
+      "image": "/photo/cats/Myo Myo 1y burmeseCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 25,
+      "name": "Niki",
+      "breed": "BombayCat",
+      "age": "6m",
+      "image": "/photo/cats/Niki 6m BombayCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 26,
+      "name": "PuccyCat",
+      "breed": "tabbyCat",
+      "age": "3y",
+      "image": "/photo/cats/PuccyCat 3y tabbyCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 27,
+      "name": "Puto",
+      "breed": "Scottish Fold",
+      "age": "1y",
+      "image": "/photo/cats/Puto 1y Scottish Fold.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 28,
+      "name": "Sherman",
+      "breed": "TabbyCat",
+      "age": "1y",
+      "image": "/photo/cats/Sherman 1y TabbyCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 29,
+      "name": "Shwe War",
+      "breed": "TabbyCat",
+      "age": "2y",
+      "image": "/photo/cats/Shwe War 2y TabbyCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 30,
+      "name": "Snowwhite",
+      "breed": "khao manee",
+      "age": "1y",
+      "image": "/photo/cats/Snowwhite 1y khao manee.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 31,
+      "name": "Thu Thu",
+      "breed": "SiameseCat",
+      "age": "2y",
+      "image": "/photo/cats/Thu Thu 2y SiameseCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 32,
+      "name": "Yoke Soe Ma",
+      "breed": "SphynxCat",
+      "age": "1y",
+      "image": "/photo/cats/Yoke Soe Ma 1y Female SphynxCat.png",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 33,
+      "name": "tt",
+      "breed": "Snowshoe",
+      "age": "",
+      "image": "",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    },
+    {
+      "id": 34,
+      "name": "tt",
+      "breed": "Snowshoe",
+      "age": "",
+      "image": "",
+      "price": 800,
+      "gender": "Male",
+      "description": "Friendly and energetic Golden Retriever who loves to play fetch!"
+    }
+  ],
+  "dogs": [],
+  "fishes": []
+}

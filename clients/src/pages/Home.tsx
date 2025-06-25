@@ -104,7 +104,7 @@ const petTypes = [
   },
 ];
 const Home = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [, setCurrentSlide] = useState(0);
 
    useEffect(() => {
     const timer = setInterval(() => {

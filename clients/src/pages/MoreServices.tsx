@@ -135,30 +135,30 @@ const MoreService = () => {
   ];
 
   // Mock data for upcoming bookings
-  const upcomingBookings = [
-    {
-      id: 101,
-      serviceId: 1,
-      serviceName: "Basic Grooming",
-      petName: "Max",
-      petType: "Dog",
-      date: "2025-06-15",
-      time: "10:00 AM",
-      status: "confirmed",
-      price: 45,
-    },
-    {
-      id: 102,
-      serviceId: 5,
-      serviceName: "Wellness Exam",
-      petName: "Luna",
-      petType: "Cat",
-      date: "2025-06-20",
-      time: "2:30 PM",
-      status: "pending",
-      price: 65,
-    },
-  ];
+  // const upcomingBookings = [
+  //   {
+  //     id: 101,
+  //     serviceId: 1,
+  //     serviceName: "Basic Grooming",
+  //     petName: "Max",
+  //     petType: "Dog",
+  //     date: "2025-06-15",
+  //     time: "10:00 AM",
+  //     status: "confirmed",
+  //     price: 45,
+  //   },
+  //   {
+  //     id: 102,
+  //     serviceId: 5,
+  //     serviceName: "Wellness Exam",
+  //     petName: "Luna",
+  //     petType: "Cat",
+  //     date: "2025-06-20",
+  //     time: "2:30 PM",
+  //     status: "pending",
+  //     price: 65,
+  //   },
+  // ];
 
   const getCategoryIcon = (category : any, size = 24) => {
     switch (category) {
@@ -262,25 +262,25 @@ const MoreService = () => {
     setShowBookingForm(false);
   };
 
-  const formatDate = (dateString  : any) => {
-    const options: Intl.DateTimeFormatOptions = { year: "numeric", month: "long", day: "numeric" };
-    return new Date(dateString).toLocaleDateString("en-US", options);
-  };
+  // const formatDate = (dateString  : any) => {
+  //   const options: Intl.DateTimeFormatOptions = { year: "numeric", month: "long", day: "numeric" };
+  //   return new Date(dateString).toLocaleDateString("en-US", options);
+  // };
 
-  const getStatusClass = (status  : any) => {
-    switch (status) {
-      case "confirmed":
-        return "bg-green-100 text-green-800";
-      case "pending":
-        return "bg-yellow-100 text-yellow-800";
-      case "completed":
-        return "bg-blue-100 text-blue-800";
-      case "cancelled":
-        return "bg-red-100 text-red-800";
-      default:
-        return "";
-    }
-  };
+  // const getStatusClass = (status  : any) => {
+  //   switch (status) {
+  //     case "confirmed":
+  //       return "bg-green-100 text-green-800";
+  //     case "pending":
+  //       return "bg-yellow-100 text-yellow-800";
+  //     case "completed":
+  //       return "bg-blue-100 text-blue-800";
+  //     case "cancelled":
+  //       return "bg-red-100 text-red-800";
+  //     default:
+  //       return "";
+  //   }
+  // };
 
   return (
     <div className="min-h-screen pt-16 bg-[#FFF5E1] relative">

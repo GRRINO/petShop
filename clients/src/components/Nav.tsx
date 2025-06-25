@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import type { RootState } from "../store";
+// import type { RootState } from "../store";
 import { useLogoutMutation } from "../slices/userApi";
 import { clearUserInfo } from "../slices/auth";
 import { Menu, X, ShoppingCart } from "lucide-react";
@@ -10,7 +10,7 @@ import Cart from "./Cart";
 import UserProfileDropdown from "./UserProfileDropdown";
 
 const Nav = () => {
-  const userInfo = useSelector((state: RootState) => state.auth.userInfo);
+  // const userInfo = useSelector((state: RootState) => state.auth.userInfo);
   const [logout, { isLoading }] = useLogoutMutation();
   const [isCartOpen, setIsCartOpen] = useState(false);
   const cartItems = useCartStore((state) => state.items);

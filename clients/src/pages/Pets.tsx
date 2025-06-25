@@ -20,11 +20,11 @@ export default function Pets() {
   const [favorites, setFavorites] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState("favorites");
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedPet, setSelectedPet] = useState(null);
-  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [, setSelectedPet] = useState(null);
+  const [, setIsCartOpen] = useState(false);
   const { addItem } = useCartStore();
 
-  const { data, error, isLoading } = useGetPetDataQuery();
+  const { data,  isLoading } = useGetPetDataQuery();
   
   const pets = (data as any )?.petInfo || [];
 

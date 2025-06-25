@@ -23,7 +23,7 @@ export const ShoppingHistory = () => {
   
     useEffect(() => {
       axios
-        .get(`http://localhost:7000/order/${userId}`)
+        .get(`https://petshop-c875.onrender.com/order/${userId}`)
   
         .then((response) => {
           console.log("API Response:", response.data.orderInfo);

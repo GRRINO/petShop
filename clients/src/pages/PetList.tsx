@@ -7,7 +7,7 @@ export function PetList() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:7000/getPets")
+      .get("https://petshop-c875.onrender.com/getPets")
 
       .then((response) => {
         console.log("API Response:", response.data.petInfo);
@@ -18,7 +18,7 @@ export function PetList() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:7000/deletePets/${id}`);
+      await axios.delete(`https://petshop-c875.onrender.com/deletePets/${id}`);
       setPets(pets.filter(pet => pet._id !== id));
       toast.success('Pet deleted successfully'); // Uncomment if using toast
     } catch (error) {

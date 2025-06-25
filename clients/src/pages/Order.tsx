@@ -18,7 +18,7 @@ const Order = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:7000/order")
+      .get("https://petshop-c875.onrender.com/order")
       .then((response) => {
         setOrders(response.data.orderInfo);
       })
@@ -27,7 +27,7 @@ const Order = () => {
 
   const handleConfirm = async (orderId) => {
     try {
-      await axios.patch(`http://localhost:7000/order/${orderId}`, {
+      await axios.patch(`https://petshop-c875.onrender.com/order/${orderId}`, {
         status: "completed",
       });
 

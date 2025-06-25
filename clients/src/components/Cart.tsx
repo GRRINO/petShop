@@ -43,7 +43,7 @@ export default function Cart({ isOpen, onClose }: CartProps) {
 
     try {
         console.log(dataToSend)
-      const res = await axios.post("http://localhost:7000/order", dataToSend);
+      const res = await axios.post("https://petshop-c875.onrender.com/order", dataToSend);
       
       setShowBookingCf(true);
       clearCart();

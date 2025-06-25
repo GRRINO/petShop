@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { PlusCircle, List, TrendingUp } from 'lucide-react';
+import { PlusCircle, List } from 'lucide-react';
 import PetIconsBackground from '../components/PetIconsBackground';
 
 export default function Dashboard() {

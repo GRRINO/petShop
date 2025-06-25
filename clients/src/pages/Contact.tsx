@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { MapPin, Phone, Mail, Clock, Heart } from "lucide-react";
+import  { useState } from "react";
+import { MapPin, Phone, Mail, Clock, } from "lucide-react";
 import axios from "axios";
 import PetIconsBackground from "../components/PetIconsBackground";
 

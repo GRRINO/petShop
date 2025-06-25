@@ -1,13 +1,9 @@
 import { useState, useRef, useEffect } from "react";
-import { User, Settings, LogOut, Bell, HelpCircle } from "lucide-react";
+import { User, Settings,  Bell, HelpCircle } from "lucide-react";
 // import { useUser } from '../pages/AuthContext2';
-import axios from "axios";
-import { ShoppingHistory } from "../pages/ShoppingHistory";
-import { Link } from "react-router-dom";
 
 const UserProfileDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
   // const { user } = useUser();

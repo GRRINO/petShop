@@ -2,7 +2,8 @@ import { PawPrint, Mail, Phone, MapPin, Heart } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className=" bg-[#6D4C41]">
+    <footer>
+      <div className="bg-[#6D4C41] ">
       <div className=" py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
@@ -89,6 +90,7 @@ const Footer = () => {
           <p className="text-center text-gray-400">Made with <Heart className="w-4 h-4 inline-block text-pink-500" /> by PawParadise</p>
         </div>
       </div>
+    </div>
     </footer>
   )
 }

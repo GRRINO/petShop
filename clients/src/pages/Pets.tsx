@@ -238,7 +238,7 @@
 
 import { useState } from "react";
 // import { useGetPetDataQuery } from "@/store/slices/userApiSlice"; // Adjust import path
-import { Heart, Search, SortDesc, Filter, Info, ShoppingCart, Tag } from "lucide-react";
+import { Heart, Search, SortDesc, Filter, Info, ShoppingCart, Tag, Loader2 } from "lucide-react";
 import { useGetPetDataQuery } from "../slices/userApi";
 import useCartStore from "../store/cartStore";
 import PetIconsBackground from "../components/PetIconsBackground";
@@ -362,11 +362,11 @@ export default function Pets() {
     // setIsCartOpen(true);
   };
 
-  if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>Error loading pets</p>;
+  // if (isLoading) return <p>Loading...</p>;
+  // if (error) return <p>Error loading pets</p>;
 
   return (
-    <div className="min-h-screen pt-16 bg-[#FFF5E1]">
+    <div className=" min-h-screen pt-16 bg-[#FFF5E1]">
       <PetIconsBackground color="pink" density="normal" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
@@ -381,8 +381,8 @@ export default function Pets() {
         </div>
 
         {/* Filters */}
-        <div className="bg-white rounded-xl shadow-md p-4 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className=" bg-white rounded-xl shadow-md p-4 mb-8">
+          <div className=" z-30 grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -428,73 +428,97 @@ export default function Pets() {
 
         {/* Pet Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {getFilteredAndSortedPets().map((pet) => (
-            <div
-              key={pet._id}
-              className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
-              onClick={() => setSelectedPet(pet)}
-            >
-              <div className="relative">
-                <img src={pet.image} alt={pet.name} className="w-[220px] h-64 object-cover mx-auto" />
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    toggleFavorite(pet._id);
-                  }}
-                  className="absolute top-4 right-4 p-2 rounded-full bg-white shadow-md hover:bg-pink-50"
-                >
-                  <Heart className={`w-6 h-6 ${favorites.includes(pet._id) ? "text-pink-500 fill-current" : "text-gray-400"}`} />
-                </button>
-                <div className="absolute bottom-4 left-4 bg-[#8A9B6E] text-white px-3 py-1 rounded-full text-sm font-medium">
-                  ${pet.price}
-                </div>
-              </div>
-              <div className="p-6 bg-[#fcd8cb]">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold">{pet.name}</h3>
-                    <p className="text-slate-800">{pet.breed}</p>
-                  </div>
-                  <span className="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full">
-                    {pet.gender}
-                  </span>
-                </div>
-                <div className="space-y-2 text-slate-800 mb-4">
-                  <div className="flex items-center">
-                    <Tag className="w-4 h-4 mr-2" />
-                    Age: {pet.age}
-                  </div>
-                  <p className="text-sm">{pet.description}</p>
-                </div>
-                <div className="flex space-x-2">
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setSelectedPet(pet);
-                    }}
-                    className="flex-1 outline-[#E07A5F] border bg-white border-[#E07A5F] text-[#E07A5F] hover:bg-[#E07A5F] hover:text-white py-2 rounded-lg"
-                  >
-                    <Info className="w-4 h-4 mr-2" />
-                    More Info
-                  </button>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleAdopt(pet);
-                      setIsCartOpen(true)
-                    }}
-                    className="flex-1 bg-[#E07A5F] text-white py-2 rounded-lg hover:bg-[#ff7e5a]"
-                  >
-                    <ShoppingCart className="w-4 h-4 mr-2" />
-                    Adopt Now
-                  </button>
-                </div>
-              </div>
+  {getFilteredAndSortedPets().map((pet) => (
+    <div
+      key={pet._id}
+      className=" z-30 bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col h-full"
+      onClick={() => setSelectedPet(pet)}
+    >
+      {/* Image Section */}
+      <div className="relative">
+        <img
+          src={pet.image}
+          alt={pet.name}
+          className="w-[220px] mx-auto h-64 object-cover"
+        />
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            toggleFavorite(pet._id);
+          }}
+          className="absolute top-4 right-4 p-2 rounded-full bg-white shadow-md hover:bg-pink-50"
+        >
+          <Heart
+            className={`w-6 h-6 ${
+              favorites.includes(pet._id)
+                ? "text-pink-500 fill-current"
+                : "text-gray-400"
+            }`}
+          />
+        </button>
+        <div className="absolute bottom-4 left-4 bg-[#8A9B6E] text-white px-3 py-1 rounded-full text-sm font-medium">
+          ${pet.price}
+        </div>
+      </div>
+
+      {/* Content Section */}
+      <div className="p-6 bg-[#fcd8cb] flex flex-col flex-1">
+        {/* Main Info */}
+        <div className="flex-1">
+          <div className="flex justify-between items-start mb-4">
+            <div>
+              <h3 className="text-xl font-semibold">{pet.name}</h3>
+              <p className="text-slate-800">{pet.breed}</p>
             </div>
-          ))}
+            {/* <span className="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full">
+              {pet.gender}
+            </span> */}
+          </div>
+
+          <div className="space-y-2 text-slate-800 text-sm mb-4">
+            <div className="flex items-center">
+              <Tag className="w-4 h-4 mr-2" />
+              Age: {pet.age}
+            </div>
+            <p>{pet.description}</p>
+          </div>
         </div>
 
-        {getFilteredAndSortedPets().length === 0 && (
+        {/* Buttons Fixed to Bottom */}
+        <div className="flex space-x-2 mt-4">
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setSelectedPet(pet);
+            }}
+            className="flex-1 flex items-center justify-center outline-[#E07A5F] border bg-white border-[#E07A5F] text-[#E07A5F] hover:bg-[#E07A5F] hover:text-white py-2 rounded-lg"
+          >
+            <Info className="w-4 h-4 mr-2" />
+            More Info
+          </button>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handleAdopt(pet);
+              setIsCartOpen(true);
+            }}
+            className="flex-1 flex items-center justify-center bg-[#E07A5F] text-white py-2 rounded-lg hover:bg-[#ff7e5a]"
+          >
+            <ShoppingCart className="w-4 h-4 mr-2" />
+            Adopt Now
+          </button>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
+
+        {
+          (isLoading) ? (<div className="text-center py-12">
+            <p className=" text-gray-600 text-lg ">Loading...</p>
+            {/* <Loader2/> */}
+          </div>): (getFilteredAndSortedPets().length === 0 && (
           <div className="text-center py-12">
             <p className="text-gray-600 text-lg">No pets found matching your criteria 😢</p>
             <button
@@ -508,7 +532,10 @@ export default function Pets() {
               Clear filters
             </button>
           </div>
-        )}
+        ))
+          
+        }
+        {}
 
         {/* {selectedPet && (
           <PetDetailsModal pet={selectedPet} onClose={() => setSelectedPet(null)} />

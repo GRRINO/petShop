@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { User, Settings,  Bell, HelpCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 // import { useUser } from '../pages/AuthContext2';
 
 const UserProfileDropdown = () => {
@@ -67,7 +68,9 @@ const UserProfileDropdown = () => {
             </button>
             <button className="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-50 flex items-center space-x-3">
               <Bell size={16} />
-              <a href="/userHistory">History</a>
+              <Link to="/userHistory">
+                                 History 
+              </Link>
               {/* <Link to='/userHistory'>History</Link> */}
             </button>
             <button className="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-50 flex items-center space-x-3">
@@ -80,7 +83,10 @@ const UserProfileDropdown = () => {
 
             <button className="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-50 flex items-center space-x-3">
               <HelpCircle size={16} />
-              <a href="/admin/dashBoard">DashBoard</a>
+              <Link to="/admin/dashBoard">
+                                  DashBoard
+              </Link>
+              
             </button>
             }
           </div>

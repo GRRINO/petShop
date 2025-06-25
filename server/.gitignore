@@ -24,6 +24,7 @@ Thumbs.db
 # IDEs and editors
 .vscode/
 .idea/
+.env
 
 # Dependency lock files (optional: ignore if you use only one)
 # package-lock.json

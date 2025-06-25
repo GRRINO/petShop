@@ -1,4 +1,4 @@
- import { BoxIcon, ChevronLeft, LockKeyholeIcon, UserIcon } from 'lucide-react'
+ import { BoxIcon, LockKeyholeIcon, UserIcon } from 'lucide-react'
  import * as z from "zod"
 import { registerSchema } from '../services/register'
 import { useForm, type SubmitHandler } from 'react-hook-form'

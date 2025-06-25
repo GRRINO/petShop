@@ -1,25 +1,25 @@
-import  { useState } from "react";
+// import  { useState } from "react";
 import { MapPin, Phone, Mail, Clock, } from "lucide-react";
-import axios from "axios";
+
 import PetIconsBackground from "../components/PetIconsBackground";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name:"",
-    email:"",
-    subject:"",
-    message:"",
-  });
-  const handleChange = (e) => {
-    const { name, value, type } = e.target;
+  // const [formData, setFormData] = useState({
+  //   name:"",
+  //   email:"",
+  //   subject:"",
+  //   message:"",
+  // });
+  // const handleChange = (e : any) => {
+  //   const { name, value, type } = e.target;
 
-    if (type === "checkbox") {
-      const checked = e.target.checked;
-      setFormData((prev) => ({ ...prev, [name]: checked }));
-    } else {
-      setFormData((prev) => ({ ...prev, [name]: value }));
-    }
-  };
+  //   if (type === "checkbox") {
+  //     const checked = e.target.checked;
+  //     setFormData((prev) => ({ ...prev, [name]: checked }));
+  //   } else {
+  //     setFormData((prev) => ({ ...prev, [name]: value }));
+  //   }
+  // };
   // const handleSubmit = async (e) => {
   //   e.preventDefault();
   //   try {
@@ -38,21 +38,21 @@ export default function Contact() {
 
   
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // onSubmit(formData);
-    try {
-      const res = await axios.post(
-        "http://localhost:3000/api/v1/content",
-        formData
-      );
-      //   setIsLogin(true)
-      console.log(formData);
-      alert(res.data.message);
-    } catch (error) {
-      alert("Error: " + error);
-    }
-  };
+  // const handleSubmit = async (e:any) => {
+  //   e.preventDefault();
+  //   // onSubmit(formData);
+  //   try {
+  //     const res = await axios.post(
+  //       "http://localhost:3000/api/v1/content",
+  //       formData
+  //     );
+  //     //   setIsLogin(true)
+  //     console.log(formData);
+  //     alert(res.data.message);
+  //   } catch (error) {
+  //     alert("Error: " + error);
+  //   }
+  // };
 
   return (
     <div className="min-h-screen pt-16 bg-[#FFF5E1] relative">

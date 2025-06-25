@@ -15,7 +15,28 @@ export const ShoppingHistory = () => {
   const user = JSON.parse(localStorage.getItem("userInfo") || "{}");
   const userId = user._id;
 
-  const [orders, setOrders] = useState([]);
+  type Pet = {
+    _id: string;
+    name: string;
+    breed: string;
+    price: number;
+    image: string;
+  };
+
+  type OrderPet = {
+    _id: string;
+    pet: Pet | null;
+    quantity: number;
+  };
+
+  type Order = {
+    _id: string;
+    status: string;
+    pets: OrderPet[];
+    // add other fields as needed
+  };
+
+  const [orders, setOrders] = useState<Order[]>([]);
   // const [confirm, setConfirm] = useState(false);
   // const toggleBackground = () => {
   //     setConfirm(!confirm)
@@ -91,7 +112,7 @@ export const ShoppingHistory = () => {
 
             <div className="space-y-6">
               {orders
-  .filter(order => 
+  .filter( order => 
     Array.isArray(order.pets) && order.pets.some(p => p.pet !== null)
   )
   .map((item) => (
@@ -113,7 +134,7 @@ export const ShoppingHistory = () => {
         )}
       </div>
 
-      {item.pets.map(({ pet, quantity, _id }) =>
+      {item.pets.map(({ pet,  _id }) =>
         pet ? (
           <div className="flex mb-4" key={_id}>
             <div className="w-24 h-24 mr-4 flex-shrink-0">

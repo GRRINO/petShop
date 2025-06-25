@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Heart, Search, SortDesc, Filter, Info, ShoppingCart, Tag, Loader2 } from "lucide-react";
+import { Heart, Search, SortDesc, Filter, Info, ShoppingCart, Tag } from "lucide-react";
 import { useGetPetDataQuery } from "../slices/userApi";
 import useCartStore from "../store/cartStore";
 import PetIconsBackground from "../components/PetIconsBackground";
@@ -25,8 +25,8 @@ export default function Pets() {
   const { addItem } = useCartStore();
 
   const { data, error, isLoading } = useGetPetDataQuery();
-
-  const pets = data?.petInfo || [];
+  
+  const pets = (data as any )?.petInfo || [];
 
   const toggleFavorite = (petId: string) => {
     setFavorites((prev) =>

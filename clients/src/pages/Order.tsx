@@ -25,7 +25,7 @@ const Order = () => {
       .catch((error) => console.error("Error fetching orders:", error));
   }, []);
 
-  const handleConfirm = async (orderId) => {
+  const handleConfirm = async (orderId : any) => {
     try {
       await axios.patch(`https://petshop-c875.onrender.com/order/${orderId}`, {
         status: "completed",

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import {
   Calendar,
   Clock,
@@ -15,7 +15,17 @@ import PetIconsBackground from "../components/PetIconsBackground";
 
 const MoreService = () => {
   const [activeCategory, setActiveCategory] = useState("all");
-  const [selectedService, setSelectedService] = useState(null);
+  type Service = {
+    id: number;
+    name: string;
+    description: string;
+    price: number;
+    duration: string;
+    category: string;
+    imageUrl: string;
+  };
+
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [showBookingForm, setShowBookingForm] = useState(false);
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
   const [bookingData, setBookingData] = useState({
@@ -150,7 +160,7 @@ const MoreService = () => {
     },
   ];
 
-  const getCategoryIcon = (category, size = 24) => {
+  const getCategoryIcon = (category : any, size = 24) => {
     switch (category) {
       case "grooming":
         return <Scissors size={size} className="text-pink-500" />;
@@ -188,7 +198,7 @@ const MoreService = () => {
       //       }
       // };
 
-  const handleBookService = (service) => {
+  const handleBookService = (service : any) => {
     setSelectedService(service);
     setBookingData((prev) => ({
       ...prev,
@@ -198,7 +208,7 @@ const MoreService = () => {
     window.scrollTo(0, 0);
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e  : any) => {
     const { name, value, type } = e.target;
 
     if (type === "checkbox") {
@@ -228,7 +238,7 @@ const MoreService = () => {
   //   }
   // };
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async(e  : any) => {
     e.preventDefault();
     try {
           const res = await axios.post(
@@ -252,12 +262,12 @@ const MoreService = () => {
     setShowBookingForm(false);
   };
 
-  const formatDate = (dateString) => {
-    const options = { year: "numeric", month: "long", day: "numeric" };
+  const formatDate = (dateString  : any) => {
+    const options: Intl.DateTimeFormatOptions = { year: "numeric", month: "long", day: "numeric" };
     return new Date(dateString).toLocaleDateString("en-US", options);
   };
 
-  const getStatusClass = (status) => {
+  const getStatusClass = (status  : any) => {
     switch (status) {
       case "confirmed":
         return "bg-green-100 text-green-800";

@@ -1,9 +1,20 @@
 import  { useEffect, useState } from "react";
 import { Trash2 } from "lucide-react";
 import axios from "axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+type Pet = {
+  _id: string;
+  name: string;
+  image: string;
+  breed: string;
+  age: number;
+  price: number;
+};
 
 export function PetList() {
-  const [pets, setPets] = useState([]);
+  const [pets, setPets] = useState<Pet[]>([]);
 
   useEffect(() => {
     axios
@@ -16,7 +27,7 @@ export function PetList() {
       .catch((error) => console.error("Error fetching pets:", error));
   }, []);
 
-  const handleDelete = async (id) => {
+  const handleDelete = async (id : any) => {
     try {
       await axios.delete(`https://petshop-c875.onrender.com/deletePets/${id}`);
       setPets(pets.filter(pet => pet._id !== id));
@@ -56,14 +67,14 @@ export function PetList() {
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Price
               </th>
-              <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Actions
               </th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
             {pets.map((pet) => (
-              <tr key={pet.id} className="hover:bg-gray-50">
+              <tr key={pet._id} className="hover:bg-gray-50">
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                   {pet.name}
                 </td>

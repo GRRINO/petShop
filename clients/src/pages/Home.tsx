@@ -280,7 +280,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className=" py-16  bg-[#FFF5E1] ">
+      {/* <div className=" py-16  bg-[#FFF5E1] ">
         <div className=" flex justify-center gap-5 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="   w-[608px] relative ">
             <img src="/p1.png" alt="" />
@@ -334,7 +334,66 @@ const Home = () => {
             <img src="/p3.png" alt="" />
           </div>
         </div>
+      </div> */}
+
+      <div className="py-16 bg-[#FFF5E1]">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    {/* First Section */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <div className="w-full">
+        <img src="/p1.png" alt="Main Visual 1" className="w-full h-auto rounded-md shadow-md" />
       </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="bg-white p-6 flex flex-col justify-center rounded-md shadow-md">
+          <h2 className="text-xl md:text-2xl font-bold text-[#8A9B6E] mb-2">
+            PET EXPRESSIONS
+          </h2>
+          <p className="text-gray-600 mb-4 text-sm md:text-base">
+            Add instant sparkle to your pet's coat!
+          </p>
+          <a
+            href="#"
+            className="text-[#E07A5F] font-medium hover:text-amber-500 transition-colors"
+          >
+            LEARN MORE
+          </a>
+        </div>
+        <div>
+          <img src="/p2.png" alt="Pet Expression" className="w-full h-auto rounded-md shadow-md" />
+        </div>
+      </div>
+    </div>
+
+    {/* Second Section */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="bg-white p-6 flex flex-col justify-center rounded-md shadow-md">
+          <h2 className="text-xl md:text-2xl font-bold text-[#8A9B6E] mb-2">
+            PUT YOUR PET IN THE GAME
+          </h2>
+          <p className="text-gray-600 mb-4 text-sm md:text-base">
+            A comfy way to dream of big wins for your favorite team
+          </p>
+          <a
+            href="#"
+            className="text-[#E07A5F] font-medium hover:text-amber-500 transition-colors"
+          >
+            LEARN MORE
+          </a>
+        </div>
+        <div>
+          <img src="/p4.png" alt="Pet Game" className="w-full h-auto rounded-md shadow-md" />
+        </div>
+      </div>
+
+      <div className="w-full">
+        <img src="/p3.png" alt="Main Visual 2" className="w-full h-auto rounded-md shadow-md" />
+      </div>
+    </div>
+  </div>
+</div>
+
 
       <div className="py-16 bg-[#FFF5E1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

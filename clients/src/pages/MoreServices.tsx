@@ -650,7 +650,7 @@ const MoreService = () => {
                   </div>
                   <div className="md:w-1/2">
                     <img
-                      src="../public/frame1.png"
+                      src="/frame1.png"
                       alt="Pet grooming service"
                       className="w-full h-full object-cover"
                     />
